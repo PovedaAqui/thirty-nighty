@@ -268,6 +268,7 @@ export default function Home() {
                 [t("faq_2_q"), t("faq_2_a")],
                 [t("faq_3_q"), t("faq_3_a")],
                 [t("faq_4_q"), t("faq_4_a")],
+                [t("faq_5_q"), t("faq_5_a")],
               ].map(([q, a]) => (
                 <details key={q} className="md-card p-5 group">
                   <summary className="md-title-large cursor-pointer list-none flex items-center justify-between gap-4">
