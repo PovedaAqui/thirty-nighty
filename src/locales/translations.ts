@@ -101,9 +101,9 @@ export const translations = {
     faq_3_a: "Yes, upgrades and downgrades take effect on your next billing cycle.",
     faq_4_q: "Do I need to bring my own models?",
     faq_4_a: "No — models are pre-loaded and tuned. Enterprise plans can discuss custom model requirements.",
-    faq_5_q: "What LLM runs under the hood?",
+    faq_5_q: "What model powers the agents?",
     faq_5_a:
-      "Currently Qwen3.6-35B-A3B-NVFP4, which delivers excellent performance for around 70% of tasks. Agents are also equipped with tools like SearXNG, Firecrawl, and Camoufox, all running in isolated, per-user Hermes containers.",
+      "Right now, Qwen3.6-35B-A3B-NVFP4 — it handles roughly 70% of everyday tasks with excellent speed and quality. On top of that, every agent has access to real tools: SearXNG for web search, Firecrawl for pulling content from pages, and Camoufox for browsing the web directly. Each user gets their own isolated Hermes container, so nothing is shared between accounts.",
 
     waitlist_title: "Get on the early access list",
     waitlist_body:
@@ -216,9 +216,9 @@ export const translations = {
       "No. La inferencia corre en hardware dedicado. Los prompts y respuestas se quedan dentro del servicio — nada se usa para entrenar modelos de terceros.",
     faq_3_q: "¿Puedo cambiar entre planes?",
     faq_3_a: "Sí, las mejoras y bajadas de plan se aplican en tu siguiente ciclo de facturación.",
-    faq_5_q: "¿Qué LLM corre por debajo?",
+    faq_5_q: "¿Qué modelo impulsa a los agentes?",
     faq_5_a:
-      "Actualmente Qwen3.6-35B-A3B-NVFP4, que ofrece un excelente rendimiento para alrededor del 70% de las tareas. Los agentes también cuentan con acceso a herramientas como SearXNG, Firecrawl y Camoufox, todo en contenedores aislados y dedicados por usuario para Hermes.",
+      "Ahora mismo, Qwen3.6-35B-A3B-NVFP4 — cubre alrededor del 70% de las tareas cotidianas con muy buena velocidad y calidad. Además, cada agente tiene acceso a herramientas reales: SearXNG para búsquedas web, Firecrawl para extraer contenido de páginas, y Camoufox para navegar la web directamente. Cada usuario tiene su propio contenedor Hermes aislado, sin nada compartido entre cuentas.",
     faq_4_q: "¿Necesito aportar mis propios modelos?",
     faq_4_a:
       "No — los modelos vienen precargados y ajustados. Los planes Enterprise pueden negociar requisitos de modelos personalizados.",
