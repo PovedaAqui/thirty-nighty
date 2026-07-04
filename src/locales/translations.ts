@@ -32,27 +32,27 @@ export const translations = {
     product_agent_badge: "Managed",
     product_agent_title: "Hermes Agents as a Service",
     product_agent_body:
-      "A Hermes agent configured for you — persistent memory, tools, and its own context. Talk to it like an assistant, not an API.",
-    product_agent_1: "Persistent memory across sessions",
-    product_agent_2: "Web search, docs, code, automations",
-    product_agent_3: "Chat, Telegram, or email access",
-    product_agent_4: "Scheduled recurring tasks",
+      "Hermes is an AI assistant that remembers your context, uses tools, and gets things done — not just a chatbot that forgets everything the moment you close the tab. We set it up and run it for you; you just start talking to it.",
+    product_agent_1: "Remembers your context between conversations",
+    product_agent_2: "Searches the web, writes docs, runs code, automates tasks",
+    product_agent_3: "Reach it over chat, Telegram, or email",
+    product_agent_4: "Set it up once to handle recurring tasks on a schedule",
     product_api_badge: "Developer",
     product_api_title: "Inference API",
     product_api_body:
-      "An OpenAI-compatible endpoint, straight to the model. Build your own wrapper, your own product, on hardware you don't have to manage.",
-    product_api_1: "OpenAI/Anthropic-compatible endpoint",
-    product_api_2: "Streaming (SSE) support",
-    product_api_3: "Speculative decoding for higher throughput",
-    product_api_4: "Priority queue on higher tiers",
+      "A raw OpenAI-compatible endpoint into the model — no agent, no assistant layer, just inference. Point any OpenAI-compatible frontend at it (Open WebUI, LibreChat, etc.), or call it directly from Python, curl, or your own app.",
+    product_api_1: "Works out of the box with Open WebUI and other OpenAI-compatible frontends",
+    product_api_2: "Call it directly with Python, curl, or any OpenAI-compatible SDK",
+    product_api_3: "Streaming (SSE) support",
+    product_api_4: "Speculative decoding for higher throughput",
 
     how_title: "One private backend, two front doors",
     how_subtitle:
       "Both products run on dedicated inference hardware — nothing shared with other providers, nothing sent to a third-party cloud.",
     how_1_title: "Clients connect",
-    how_1_body: "Chat / Telegram for agent users, API key for developers.",
+    how_1_body: "Talk to your Hermes agent over chat/Telegram, or call the API from Open WebUI, Python, curl, or any OpenAI-compatible client.",
     how_2_title: "Service layer",
-    how_2_body: "Hermes agents (isolated, per-client memory) or raw API routing.",
+    how_2_body: "Hermes agents (isolated, per-client memory) or raw API routing — no assistant layer in between.",
     how_3_title: "Dedicated inference hardware",
     how_3_body:
       "A fixed-cost inference appliance with speculative decoding for high throughput. Fully private — nothing leaves the box.",
@@ -90,7 +90,10 @@ export const translations = {
     faq_title: "Frequently asked",
     faq_1_q: "What's the difference between an agent and the API?",
     faq_1_a:
-      "The agent is a ready-to-use Hermes assistant with memory and tools — you just talk to it. The API is a raw OpenAI-compatible endpoint for developers who want to build their own product on top of the inference layer.",
+      "The Hermes agent is a ready-to-use AI assistant with memory and tools — you just talk to it, no setup required on your end. The API is raw inference: an OpenAI-compatible endpoint with no assistant layer, meant for developers who want to plug in their own frontend or code.",
+    faq_1b_q: "How do I use the Inference API?",
+    faq_1b_a:
+      "However you want. Point an existing OpenAI-compatible frontend at it — Open WebUI, LibreChat, and similar tools work out of the box — or call it directly with Python, curl, or any OpenAI-compatible SDK. It's the same endpoint shape as OpenAI's API, just pointed at our hardware.",
     faq_2_q: "Is my data used to train anything?",
     faq_2_a:
       "No. Inference runs on dedicated hardware. Prompts and outputs stay within the service — nothing is used for third-party training.",
@@ -142,27 +145,27 @@ export const translations = {
     product_agent_badge: "Gestionado",
     product_agent_title: "Agentes Hermes como servicio",
     product_agent_body:
-      "Un agente Hermes configurado para ti — memoria persistente, herramientas y su propio contexto. Háblale como a un asistente, no como a una API.",
-    product_agent_1: "Memoria persistente entre sesiones",
-    product_agent_2: "Búsqueda web, documentos, código, automatizaciones",
-    product_agent_3: "Acceso por chat, Telegram o email",
-    product_agent_4: "Tareas recurrentes programadas",
+      "Hermes es un asistente de IA que recuerda tu contexto, usa herramientas y hace tareas por ti — no es solo un chatbot que olvida todo al cerrar la pestaña. Lo configuramos y lo mantenemos funcionando nosotros; tú solo empiezas a hablarle.",
+    product_agent_1: "Recuerda tu contexto entre conversaciones",
+    product_agent_2: "Busca en la web, redacta documentos, ejecuta código, automatiza tareas",
+    product_agent_3: "Accede por chat, Telegram o email",
+    product_agent_4: "Configúralo una vez para tareas recurrentes programadas",
     product_api_badge: "Desarrollador",
     product_api_title: "API de inferencia",
     product_api_body:
-      "Un endpoint compatible con OpenAI, directo al modelo. Construye tu propio wrapper, tu propio producto, sobre hardware que no tienes que gestionar.",
-    product_api_1: "Endpoint compatible con OpenAI/Anthropic",
-    product_api_2: "Soporte de streaming (SSE)",
-    product_api_3: "Decodificación especulativa para mayor rendimiento",
-    product_api_4: "Cola prioritaria en planes superiores",
+      "Un endpoint de inferencia puro, compatible con OpenAI — sin agente, sin capa de asistente, solo el modelo. Apunta cualquier frontend compatible con OpenAI (Open WebUI, LibreChat, etc.), o llámalo directamente desde Python, curl o tu propia app.",
+    product_api_1: "Funciona de fábrica con Open WebUI y otros frontends compatibles con OpenAI",
+    product_api_2: "Llámalo directamente con Python, curl o cualquier SDK compatible con OpenAI",
+    product_api_3: "Soporte de streaming (SSE)",
+    product_api_4: "Decodificación especulativa para mayor rendimiento",
 
     how_title: "Un backend privado, dos puertas de entrada",
     how_subtitle:
       "Ambos productos corren sobre hardware de inferencia dedicado — nada compartido con otros proveedores, nada enviado a una nube de terceros.",
     how_1_title: "Los clientes se conectan",
-    how_1_body: "Chat / Telegram para usuarios del agente, API key para desarrolladores.",
+    how_1_body: "Habla con tu agente Hermes por chat/Telegram, o llama a la API desde Open WebUI, Python, curl o cualquier cliente compatible con OpenAI.",
     how_2_title: "Capa de servicio",
-    how_2_body: "Agentes Hermes (aislados, memoria por cliente) o enrutamiento directo de API.",
+    how_2_body: "Agentes Hermes (aislados, memoria por cliente) o enrutamiento directo de API — sin capa de asistente de por medio.",
     how_3_title: "Hardware de inferencia dedicado",
     how_3_body:
       "Un equipo de inferencia de coste fijo con decodificación especulativa para alto rendimiento. Totalmente privado — nada sale del equipo.",
@@ -201,7 +204,10 @@ export const translations = {
     faq_title: "Preguntas frecuentes",
     faq_1_q: "¿Cuál es la diferencia entre un agente y la API?",
     faq_1_a:
-      "El agente es un asistente Hermes listo para usar, con memoria y herramientas — solo le hablas. La API es un endpoint compatible con OpenAI para desarrolladores que quieren construir su propio producto sobre la capa de inferencia.",
+      "El agente Hermes es un asistente de IA listo para usar, con memoria y herramientas — solo le hablas, sin ninguna configuración de tu parte. La API es inferencia pura: un endpoint compatible con OpenAI sin capa de asistente, pensado para desarrolladores que quieren conectar su propio frontend o código.",
+    faq_1b_q: "¿Cómo uso la API de Inferencia?",
+    faq_1b_a:
+      "Como prefieras. Apunta un frontend compatible con OpenAI que ya uses — Open WebUI, LibreChat y herramientas similares funcionan de fábrica — o llámalo directamente con Python, curl, o cualquier SDK compatible con OpenAI. Es el mismo formato de endpoint que la API de OpenAI, solo que apuntando a nuestro hardware.",
     faq_2_q: "¿Se usan mis datos para entrenar algo?",
     faq_2_a:
       "No. La inferencia corre en hardware dedicado. Los prompts y respuestas se quedan dentro del servicio — nada se usa para entrenar modelos de terceros.",

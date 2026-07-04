@@ -264,6 +264,7 @@ export default function Home() {
             <div className="grid gap-3">
               {[
                 [t("faq_1_q"), t("faq_1_a")],
+                [t("faq_1b_q"), t("faq_1b_a")],
                 [t("faq_2_q"), t("faq_2_a")],
                 [t("faq_3_q"), t("faq_3_a")],
                 [t("faq_4_q"), t("faq_4_a")],
