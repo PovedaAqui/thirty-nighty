@@ -215,9 +215,9 @@ export default function Home() {
               <p className="md-title-large mb-4">{t("pricing_agents_label")}</p>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 {[
-                  { name: "Starter", price: "$9", period: "/mo", features: [t("pricing_agent_starter"), t("pricing_agent_5k")] },
-                  { name: "Pro", price: "$29", period: "/mo", features: [t("pricing_agent_starter"), t("pricing_agent_advanced"), t("pricing_agent_25k")], highlight: true },
-                  { name: "Team", price: "$79", period: "/mo", features: [t("pricing_agent_team"), t("pricing_agent_centralized")] },
+                  { name: "Starter", price: "€9", period: "/mo", features: [t("pricing_agent_starter"), t("pricing_agent_5k")] },
+                  { name: "Pro", price: "€29", period: "/mo", features: [t("pricing_agent_starter"), t("pricing_agent_advanced"), t("pricing_agent_25k")], highlight: true },
+                  { name: "Team", price: "€79", period: "/mo", features: [t("pricing_agent_team"), t("pricing_agent_centralized")] },
                   { name: "Enterprise", price: "Custom", period: "", features: [t("pricing_agent_unlimited"), t("pricing_agent_sla")] },
                 ].map((tier) => (
                   <PricingCard key={tier.name} {...tier} mostPopularLabel={t("pricing_most_popular")} />
@@ -229,9 +229,9 @@ export default function Home() {
               <p className="md-title-large mb-4">{t("pricing_api_label")}</p>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 {[
-                  { name: "Free", price: "$0", period: "", features: [t("pricing_api_100"), t("pricing_api_base")] },
-                  { name: "Dev", price: "$5", period: "/mo", features: [t("pricing_api_10k"), t("pricing_api_streaming")] },
-                  { name: "Pro", price: "$25", period: "/mo", features: [t("pricing_api_100k"), t("pricing_api_priority")], highlight: true },
+                  { name: "Free", price: "€0", period: "", features: [t("pricing_api_100"), t("pricing_api_base")] },
+                  { name: "Dev", price: "€5", period: "/mo", features: [t("pricing_api_10k"), t("pricing_api_streaming")] },
+                  { name: "Pro", price: "€25", period: "/mo", features: [t("pricing_api_100k"), t("pricing_api_priority")], highlight: true },
                   { name: "Enterprise", price: "Custom", period: "", features: [t("pricing_api_volume"), t("pricing_api_sla")] },
                 ].map((tier) => (
                   <PricingCard key={tier.name} {...tier} mostPopularLabel={t("pricing_most_popular")} />

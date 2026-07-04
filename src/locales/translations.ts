@@ -19,7 +19,7 @@ export const translations = {
 
     problem_title: "Cloud AI gets expensive and leaky, fast.",
     problem_body:
-      "Coding agents alone can burn $100–$1,000 per developer, per month. Every prompt round-trips through someone else's servers. And the moment you need a real assistant — not just an API — you're back to duct-taping wrappers.",
+      "Coding agents alone can burn €100–€1,000 per developer, per month. Every prompt round-trips through someone else's servers. And the moment you need a real assistant — not just an API — you're back to duct-taping wrappers.",
     problem_1_title: "Unpredictable bills",
     problem_1_body: "Token meters never stop running, and usage spikes with adoption.",
     problem_2_title: "Data leaves the building",
@@ -135,7 +135,7 @@ export const translations = {
 
     problem_title: "La IA en la nube se vuelve cara y filtra datos, rápido.",
     problem_body:
-      "Solo los agentes de código pueden costar entre $100 y $1,000 por desarrollador al mes. Cada prompt viaja por servidores ajenos. Y en cuanto necesitas un asistente real — no solo una API — vuelves a improvisar wrappers.",
+      "Solo los agentes de código pueden costar entre €100 y €1,000 por desarrollador al mes. Cada prompt viaja por servidores ajenos. Y en cuanto necesitas un asistente real — no solo una API — vuelves a improvisar wrappers.",
     problem_1_title: "Facturas impredecibles",
     problem_1_body: "El medidor de tokens nunca se detiene, y el uso se dispara con la adopción.",
     problem_2_title: "Los datos salen de casa",
