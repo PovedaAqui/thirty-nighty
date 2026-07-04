@@ -105,6 +105,9 @@ export const translations = {
     waitlist_email_label: "Email address",
     waitlist_email_placeholder: "you@example.com",
     waitlist_submit: "Notify me",
+    waitlist_submitting: "Submitting…",
+    waitlist_success: "You're on the list — we'll be in touch.",
+    waitlist_error: "Something went wrong. Please try again.",
 
     footer_copyright: "© 2026 Thirty Nighty. An independent project.",
   },
@@ -214,6 +217,9 @@ export const translations = {
     waitlist_email_label: "Correo electrónico",
     waitlist_email_placeholder: "tu@ejemplo.com",
     waitlist_submit: "Avísame",
+    waitlist_submitting: "Enviando…",
+    waitlist_success: "Ya estás en la lista — te contactaremos.",
+    waitlist_error: "Algo salió mal. Inténtalo de nuevo.",
 
     footer_copyright: "© 2026 Thirty Nighty. Un proyecto independiente.",
   },

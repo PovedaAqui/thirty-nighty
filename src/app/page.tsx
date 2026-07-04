@@ -1,6 +1,7 @@
 "use client";
 
 import { useLocale } from "@/hooks/useLocale";
+import WaitlistForm from "@/components/WaitlistForm";
 
 export default function Home() {
   const { locale, setLocale, t } = useLocale();
@@ -292,18 +293,7 @@ export default function Home() {
               <p className="md-body-large mt-3 max-w-md mx-auto" style={{ color: "var(--md-sys-color-on-primary-container)" }}>
                 {t("waitlist_body")}
               </p>
-              <form className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                <label htmlFor="email" className="sr-only">{t("waitlist_email_label")}</label>
-                <input
-                  id="email"
-                  type="email"
-                  required
-                  placeholder={t("waitlist_email_placeholder")}
-                  className="flex-1 h-12 px-4 rounded-[var(--md-shape-corner-full)] border-none md-body-large"
-                  style={{ background: "var(--md-sys-color-surface-container-lowest)", color: "var(--md-sys-color-on-surface)" }}
-                />
-                <button type="submit" className="md-button-filled h-12">{t("waitlist_submit")}</button>
-              </form>
+              <WaitlistForm locale={locale} t={t} />
             </div>
           </div>
         </section>
