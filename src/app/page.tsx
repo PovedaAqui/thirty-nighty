@@ -190,19 +190,25 @@ export default function Home() {
         <section id="pricing" className="py-20 bg-[color:var(--md-sys-color-surface-container-low)]">
           <div className="container-md">
             <div className="text-center max-w-2xl mx-auto mb-14">
-              <h2 className="md-headline-large">Simple, fixed pricing</h2>
+              <h2 className="md-headline-large">Aggressive launch pricing</h2>
               <p className="md-body-large mt-4 text-[color:var(--md-sys-color-on-surface-variant)]">
-                No per-token bill shock. Pick a line, pick a tier.
+                No per-token bill shock, and early pricing well below market to get you in the door.
               </p>
+            </div>
+
+            <div className="text-center mb-8">
+              <span className="md-chip" style={{ background: "var(--md-sys-color-tertiary-container)", color: "var(--md-sys-color-on-tertiary-container)" }}>
+                Launch pricing — limited time
+              </span>
             </div>
 
             <div className="mb-10">
               <p className="md-title-large mb-4">Agents as a Service</p>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 {[
-                  { name: "Starter", price: "$29", period: "/mo", features: ["1 Hermes agent", "5K interactions/mo"] },
-                  { name: "Pro", price: "$79", period: "/mo", features: ["1 Hermes agent", "Advanced tools", "25K interactions/mo"], highlight: true },
-                  { name: "Team", price: "$199", period: "/mo", features: ["Up to 5 agents", "Centralized management"] },
+                  { name: "Starter", price: "$9", period: "/mo", features: ["1 Hermes agent", "5K interactions/mo"] },
+                  { name: "Pro", price: "$29", period: "/mo", features: ["1 Hermes agent", "Advanced tools", "25K interactions/mo"], highlight: true },
+                  { name: "Team", price: "$79", period: "/mo", features: ["Up to 5 agents", "Centralized management"] },
                   { name: "Enterprise", price: "Custom", period: "", features: ["Unlimited agents", "SLA, dedicated instance"] },
                 ].map((tier) => (
                   <PricingCard key={tier.name} {...tier} />
@@ -215,8 +221,8 @@ export default function Home() {
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 {[
                   { name: "Free", price: "$0", period: "", features: ["100 requests/mo", "Base model"] },
-                  { name: "Dev", price: "$19", period: "/mo", features: ["10K requests/mo", "Streaming"] },
-                  { name: "Pro", price: "$69", period: "/mo", features: ["100K requests/mo", "Priority queue"], highlight: true },
+                  { name: "Dev", price: "$5", period: "/mo", features: ["10K requests/mo", "Streaming"] },
+                  { name: "Pro", price: "$25", period: "/mo", features: ["100K requests/mo", "Priority queue"], highlight: true },
                   { name: "Enterprise", price: "Custom", period: "", features: ["Dedicated volume", "SLA"] },
                 ].map((tier) => (
                   <PricingCard key={tier.name} {...tier} />
