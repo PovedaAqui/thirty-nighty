@@ -1,4 +1,10 @@
+"use client";
+
+import { useLocale } from "@/hooks/useLocale";
+
 export default function Home() {
+  const { locale, setLocale, t } = useLocale();
+
   return (
     <>
       {/* NAV */}
@@ -19,12 +25,22 @@ export default function Home() {
             Thirty Nighty
           </a>
           <div className="hidden md:flex items-center gap-6 md-body-medium text-[color:var(--md-sys-color-on-surface-variant)]">
-            <a href="#product" className="hover:text-[color:var(--md-sys-color-on-surface)]">Product</a>
-            <a href="#how-it-works" className="hover:text-[color:var(--md-sys-color-on-surface)]">How it works</a>
-            <a href="#pricing" className="hover:text-[color:var(--md-sys-color-on-surface)]">Pricing</a>
-            <a href="#faq" className="hover:text-[color:var(--md-sys-color-on-surface)]">FAQ</a>
+            <a href="#product" className="hover:text-[color:var(--md-sys-color-on-surface)]">{t("nav_product")}</a>
+            <a href="#how-it-works" className="hover:text-[color:var(--md-sys-color-on-surface)]">{t("nav_how")}</a>
+            <a href="#pricing" className="hover:text-[color:var(--md-sys-color-on-surface)]">{t("nav_pricing")}</a>
+            <a href="#faq" className="hover:text-[color:var(--md-sys-color-on-surface)]">{t("nav_faq")}</a>
           </div>
-          <a href="#waitlist" className="md-button-filled">Join waitlist</a>
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              onClick={() => setLocale(locale === "en" ? "es" : "en")}
+              className="md-button-outlined h-9 px-4"
+              aria-label={locale === "en" ? "Cambiar a español" : "Switch to English"}
+            >
+              🌐 {locale === "en" ? "Español" : "English"}
+            </button>
+            <a href="#waitlist" className="md-button-filled">{t("nav_join")}</a>
+          </div>
         </nav>
       </header>
 
@@ -40,22 +56,20 @@ export default function Home() {
             }}
           />
           <div className="container-md pt-20 pb-24 md:pt-28 md:pb-32 text-center">
-            <div className="md-chip mx-auto mb-6 w-fit">Now onboarding early access</div>
+            <div className="md-chip mx-auto mb-6 w-fit">{t("hero_badge")}</div>
             <h1 className="md-display-large text-[color:var(--md-sys-color-on-surface)] max-w-3xl mx-auto">
-              A managed AI agent, or raw inference.{" "}
-              <span style={{ color: "var(--md-sys-color-primary)" }}>Your call.</span>
+              {t("hero_title_1")}{" "}
+              <span style={{ color: "var(--md-sys-color-primary)" }}>{t("hero_title_2")}</span>
             </h1>
             <p className="md-body-large mt-6 max-w-xl mx-auto text-[color:var(--md-sys-color-on-surface-variant)]">
-              Thirty Nighty runs a Hermes agent for you — memory, tools, context included —
-              or hands you a plain OpenAI-compatible endpoint if you'd rather build it yourself.
-              Same private hardware underneath either way.
+              {t("hero_body")}
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-              <a href="#waitlist" className="md-button-filled">Get early access</a>
-              <a href="#how-it-works" className="md-button-outlined">See how it works</a>
+              <a href="#waitlist" className="md-button-filled">{t("hero_cta_primary")}</a>
+              <a href="#how-it-works" className="md-button-outlined">{t("hero_cta_secondary")}</a>
             </div>
             <p className="md-body-medium mt-6 text-[color:var(--md-sys-color-on-surface-variant)]">
-              Fixed hardware cost · No per-token surprises · Data never leaves the box
+              {t("hero_footnote")}
             </p>
           </div>
         </section>
@@ -65,18 +79,16 @@ export default function Home() {
           <div className="container-md">
             <div className="grid md:grid-cols-2 gap-10 items-start">
               <div>
-                <h2 className="md-headline-large">Cloud AI gets expensive and leaky, fast.</h2>
+                <h2 className="md-headline-large">{t("problem_title")}</h2>
                 <p className="md-body-large mt-4 text-[color:var(--md-sys-color-on-surface-variant)]">
-                  Coding agents alone can burn $100–$1,000 per developer, per month. Every
-                  prompt round-trips through someone else's servers. And the moment you need
-                  a real assistant — not just an API — you're back to duct-taping wrappers.
+                  {t("problem_body")}
                 </p>
               </div>
               <ul className="grid gap-4">
                 {[
-                  ["Unpredictable bills", "Token meters never stop running, and usage spikes with adoption."],
-                  ["Data leaves the building", "Regulated teams can't ship customer data to a third-party LLM."],
-                  ["No real agent, just API calls", "Wrapping an API isn't the same as an assistant with memory and tools."],
+                  [t("problem_1_title"), t("problem_1_body")],
+                  [t("problem_2_title"), t("problem_2_body")],
+                  [t("problem_3_title"), t("problem_3_body")],
                 ].map(([title, body]) => (
                   <li key={title} className="md-card p-5">
                     <p className="md-title-large">{title}</p>
@@ -92,25 +104,24 @@ export default function Home() {
         <section id="product" className="py-20 bg-[color:var(--md-sys-color-surface-container-low)]">
           <div className="container-md">
             <div className="text-center max-w-2xl mx-auto mb-14">
-              <h2 className="md-headline-large">Two ways to run on Thirty Nighty</h2>
+              <h2 className="md-headline-large">{t("product_title")}</h2>
               <p className="md-body-large mt-4 text-[color:var(--md-sys-color-on-surface-variant)]">
-                Same private inference backend. Pick the layer that fits how you work.
+                {t("product_subtitle")}
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="md-card md-card--elevated p-8">
-                <div className="md-chip mb-4">Managed</div>
-                <h3 className="md-headline-medium">Hermes Agents as a Service</h3>
+                <div className="md-chip mb-4">{t("product_agent_badge")}</div>
+                <h3 className="md-headline-medium">{t("product_agent_title")}</h3>
                 <p className="md-body-large mt-3 text-[color:var(--md-sys-color-on-surface-variant)]">
-                  A Hermes agent configured for you — persistent memory, tools, and its own
-                  context. Talk to it like an assistant, not an API.
+                  {t("product_agent_body")}
                 </p>
                 <ul className="mt-6 grid gap-3">
                   {[
-                    "Persistent memory across sessions",
-                    "Web search, docs, code, automations",
-                    "Chat, Telegram, or email access",
-                    "Scheduled recurring tasks",
+                    t("product_agent_1"),
+                    t("product_agent_2"),
+                    t("product_agent_3"),
+                    t("product_agent_4"),
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 md-body-medium">
                       <CheckIcon />
@@ -121,19 +132,18 @@ export default function Home() {
               </div>
               <div className="md-card md-card--elevated p-8">
                 <div className="md-chip mb-4" style={{ background: "var(--md-sys-color-tertiary-container)", color: "var(--md-sys-color-on-tertiary-container)" }}>
-                  Developer
+                  {t("product_api_badge")}
                 </div>
-                <h3 className="md-headline-medium">Inference API</h3>
+                <h3 className="md-headline-medium">{t("product_api_title")}</h3>
                 <p className="md-body-large mt-3 text-[color:var(--md-sys-color-on-surface-variant)]">
-                  An OpenAI-compatible endpoint, straight to the model. Build your own
-                  wrapper, your own product, on hardware you don't have to manage.
+                  {t("product_api_body")}
                 </p>
                 <ul className="mt-6 grid gap-3">
                   {[
-                    "OpenAI/Anthropic-compatible endpoint",
-                    "Streaming (SSE) support",
-                    "Speculative decoding for higher throughput",
-                    "Priority queue on higher tiers",
+                    t("product_api_1"),
+                    t("product_api_2"),
+                    t("product_api_3"),
+                    t("product_api_4"),
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 md-body-medium">
                       <CheckIcon />
@@ -150,36 +160,34 @@ export default function Home() {
         <section id="how-it-works" className="py-20">
           <div className="container-md">
             <div className="text-center max-w-2xl mx-auto mb-14">
-              <h2 className="md-headline-large">One private backend, two front doors</h2>
+              <h2 className="md-headline-large">{t("how_title")}</h2>
               <p className="md-body-large mt-4 text-[color:var(--md-sys-color-on-surface-variant)]">
-                Both products run on dedicated inference hardware — nothing shared with
-                other providers, nothing sent to a third-party cloud.
+                {t("how_subtitle")}
               </p>
             </div>
             <div className="md-card p-8 md:p-10">
               <div className="grid md:grid-cols-3 gap-6 items-center text-center">
                 <div>
                   <StepBadge n={1} />
-                  <p className="md-title-large mt-3">Clients connect</p>
+                  <p className="md-title-large mt-3">{t("how_1_title")}</p>
                   <p className="md-body-medium mt-1 text-[color:var(--md-sys-color-on-surface-variant)]">
-                    Chat / Telegram for agent users, API key for developers.
+                    {t("how_1_body")}
                   </p>
                 </div>
                 <ArrowIcon />
                 <div>
                   <StepBadge n={2} />
-                  <p className="md-title-large mt-3">Service layer</p>
+                  <p className="md-title-large mt-3">{t("how_2_title")}</p>
                   <p className="md-body-medium mt-1 text-[color:var(--md-sys-color-on-surface-variant)]">
-                    Hermes agents (isolated, per-client memory) or raw API routing.
+                    {t("how_2_body")}
                   </p>
                 </div>
               </div>
               <div className="mt-8 pt-8 border-t border-[color:var(--md-sys-color-outline-variant)] text-center">
                 <StepBadge n={3} />
-                <p className="md-title-large mt-3">Dedicated inference hardware</p>
+                <p className="md-title-large mt-3">{t("how_3_title")}</p>
                 <p className="md-body-medium mt-1 max-w-md mx-auto text-[color:var(--md-sys-color-on-surface-variant)]">
-                  A fixed-cost inference appliance with speculative decoding for high
-                  throughput. Fully private — nothing leaves the box.
+                  {t("how_3_body")}
                 </p>
               </div>
             </div>
@@ -190,42 +198,42 @@ export default function Home() {
         <section id="pricing" className="py-20 bg-[color:var(--md-sys-color-surface-container-low)]">
           <div className="container-md">
             <div className="text-center max-w-2xl mx-auto mb-14">
-              <h2 className="md-headline-large">Aggressive launch pricing</h2>
+              <h2 className="md-headline-large">{t("pricing_title")}</h2>
               <p className="md-body-large mt-4 text-[color:var(--md-sys-color-on-surface-variant)]">
-                No per-token bill shock, and early pricing well below market to get you in the door.
+                {t("pricing_subtitle")}
               </p>
             </div>
 
             <div className="text-center mb-8">
               <span className="md-chip" style={{ background: "var(--md-sys-color-tertiary-container)", color: "var(--md-sys-color-on-tertiary-container)" }}>
-                Launch pricing — limited time
+                {t("pricing_badge")}
               </span>
             </div>
 
             <div className="mb-10">
-              <p className="md-title-large mb-4">Agents as a Service</p>
+              <p className="md-title-large mb-4">{t("pricing_agents_label")}</p>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 {[
-                  { name: "Starter", price: "$9", period: "/mo", features: ["1 Hermes agent", "5K interactions/mo"] },
-                  { name: "Pro", price: "$29", period: "/mo", features: ["1 Hermes agent", "Advanced tools", "25K interactions/mo"], highlight: true },
-                  { name: "Team", price: "$79", period: "/mo", features: ["Up to 5 agents", "Centralized management"] },
-                  { name: "Enterprise", price: "Custom", period: "", features: ["Unlimited agents", "SLA, dedicated instance"] },
+                  { name: "Starter", price: "$9", period: "/mo", features: [t("pricing_agent_starter"), t("pricing_agent_5k")] },
+                  { name: "Pro", price: "$29", period: "/mo", features: [t("pricing_agent_starter"), t("pricing_agent_advanced"), t("pricing_agent_25k")], highlight: true },
+                  { name: "Team", price: "$79", period: "/mo", features: [t("pricing_agent_team"), t("pricing_agent_centralized")] },
+                  { name: "Enterprise", price: "Custom", period: "", features: [t("pricing_agent_unlimited"), t("pricing_agent_sla")] },
                 ].map((tier) => (
-                  <PricingCard key={tier.name} {...tier} />
+                  <PricingCard key={tier.name} {...tier} mostPopularLabel={t("pricing_most_popular")} />
                 ))}
               </div>
             </div>
 
             <div>
-              <p className="md-title-large mb-4">Inference API</p>
+              <p className="md-title-large mb-4">{t("pricing_api_label")}</p>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 {[
-                  { name: "Free", price: "$0", period: "", features: ["100 requests/mo", "Base model"] },
-                  { name: "Dev", price: "$5", period: "/mo", features: ["10K requests/mo", "Streaming"] },
-                  { name: "Pro", price: "$25", period: "/mo", features: ["100K requests/mo", "Priority queue"], highlight: true },
-                  { name: "Enterprise", price: "Custom", period: "", features: ["Dedicated volume", "SLA"] },
+                  { name: "Free", price: "$0", period: "", features: [t("pricing_api_100"), t("pricing_api_base")] },
+                  { name: "Dev", price: "$5", period: "/mo", features: [t("pricing_api_10k"), t("pricing_api_streaming")] },
+                  { name: "Pro", price: "$25", period: "/mo", features: [t("pricing_api_100k"), t("pricing_api_priority")], highlight: true },
+                  { name: "Enterprise", price: "Custom", period: "", features: [t("pricing_api_volume"), t("pricing_api_sla")] },
                 ].map((tier) => (
-                  <PricingCard key={tier.name} {...tier} />
+                  <PricingCard key={tier.name} {...tier} mostPopularLabel={t("pricing_most_popular")} />
                 ))}
               </div>
             </div>
@@ -236,9 +244,9 @@ export default function Home() {
         <section className="py-20">
           <div className="container-md grid md:grid-cols-3 gap-6 text-center">
             {[
-              ["Fixed-cost hardware", "One-time infrastructure cost. No meter running while you sleep."],
-              ["Private by design", "Inference happens on dedicated hardware — no data sent to third-party clouds."],
-              ["Built solo, built in the open", "An independent project, no investors, no committee — just shipped decisions."],
+              [t("trust_1_title"), t("trust_1_body")],
+              [t("trust_2_title"), t("trust_2_body")],
+              [t("trust_3_title"), t("trust_3_body")],
             ].map(([title, body]) => (
               <div key={title} className="md-card p-6">
                 <p className="md-title-large">{title}</p>
@@ -251,13 +259,13 @@ export default function Home() {
         {/* FAQ */}
         <section id="faq" className="py-20 bg-[color:var(--md-sys-color-surface-container-low)]">
           <div className="container-md max-w-2xl">
-            <h2 className="md-headline-large text-center mb-10">Frequently asked</h2>
+            <h2 className="md-headline-large text-center mb-10">{t("faq_title")}</h2>
             <div className="grid gap-3">
               {[
-                ["What's the difference between an agent and the API?", "The agent is a ready-to-use Hermes assistant with memory and tools — you just talk to it. The API is a raw OpenAI-compatible endpoint for developers who want to build their own product on top of the inference layer."],
-                ["Is my data used to train anything?", "No. Inference runs on dedicated hardware. Prompts and outputs stay within the service — nothing is used for third-party training."],
-                ["Can I switch between plans?", "Yes, upgrades and downgrades take effect on your next billing cycle."],
-                ["Do I need to bring my own models?", "No — models are pre-loaded and tuned. Enterprise plans can discuss custom model requirements."],
+                [t("faq_1_q"), t("faq_1_a")],
+                [t("faq_2_q"), t("faq_2_a")],
+                [t("faq_3_q"), t("faq_3_a")],
+                [t("faq_4_q"), t("faq_4_a")],
               ].map(([q, a]) => (
                 <details key={q} className="md-card p-5 group">
                   <summary className="md-title-large cursor-pointer list-none flex items-center justify-between gap-4">
@@ -279,23 +287,22 @@ export default function Home() {
               style={{ background: "var(--md-sys-color-primary-container)", border: "none" }}
             >
               <h2 className="md-headline-large" style={{ color: "var(--md-sys-color-on-primary-container)" }}>
-                Get on the early access list
+                {t("waitlist_title")}
               </h2>
               <p className="md-body-large mt-3 max-w-md mx-auto" style={{ color: "var(--md-sys-color-on-primary-container)" }}>
-                We're onboarding a limited number of agents and API keys first. Leave your
-                email and we'll reach out.
+                {t("waitlist_body")}
               </p>
               <form className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                <label htmlFor="email" className="sr-only">Email address</label>
+                <label htmlFor="email" className="sr-only">{t("waitlist_email_label")}</label>
                 <input
                   id="email"
                   type="email"
                   required
-                  placeholder="you@example.com"
+                  placeholder={t("waitlist_email_placeholder")}
                   className="flex-1 h-12 px-4 rounded-[var(--md-shape-corner-full)] border-none md-body-large"
                   style={{ background: "var(--md-sys-color-surface-container-lowest)", color: "var(--md-sys-color-on-surface)" }}
                 />
-                <button type="submit" className="md-button-filled h-12">Notify me</button>
+                <button type="submit" className="md-button-filled h-12">{t("waitlist_submit")}</button>
               </form>
             </div>
           </div>
@@ -305,11 +312,11 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="border-t border-[color:var(--md-sys-color-outline-variant)] py-10">
         <div className="container-md flex flex-col sm:flex-row items-center justify-between gap-4 md-body-medium text-[color:var(--md-sys-color-on-surface-variant)]">
-          <p>© 2026 Thirty Nighty. An independent project.</p>
+          <p>{t("footer_copyright")}</p>
           <div className="flex items-center gap-6">
-            <a href="#product" className="hover:text-[color:var(--md-sys-color-on-surface)]">Product</a>
-            <a href="#pricing" className="hover:text-[color:var(--md-sys-color-on-surface)]">Pricing</a>
-            <a href="#faq" className="hover:text-[color:var(--md-sys-color-on-surface)]">FAQ</a>
+            <a href="#product" className="hover:text-[color:var(--md-sys-color-on-surface)]">{t("nav_product")}</a>
+            <a href="#pricing" className="hover:text-[color:var(--md-sys-color-on-surface)]">{t("nav_pricing")}</a>
+            <a href="#faq" className="hover:text-[color:var(--md-sys-color-on-surface)]">{t("nav_faq")}</a>
           </div>
         </div>
       </footer>
@@ -354,12 +361,14 @@ function PricingCard({
   period,
   features,
   highlight,
+  mostPopularLabel,
 }: {
   name: string;
   price: string;
   period: string;
   features: string[];
   highlight?: boolean;
+  mostPopularLabel: string;
 }) {
   return (
     <div
@@ -372,7 +381,7 @@ function PricingCard({
           : undefined
       }
     >
-      {highlight && <div className="md-chip mb-3">Most popular</div>}
+      {highlight && <div className="md-chip mb-3">{mostPopularLabel}</div>}
       <p className="md-title-large">{name}</p>
       <p className="md-display-small mt-2">
         {price}
