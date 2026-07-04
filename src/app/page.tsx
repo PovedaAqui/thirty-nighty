@@ -25,22 +25,22 @@ export default function Home() {
             </span>
             Thirty Nighty
           </a>
-          <div className="hidden sm:flex items-center gap-4 md:gap-6 md-body-medium text-[color:var(--md-sys-color-on-surface-variant)]">
+          <div className="hidden md:flex items-center gap-6 md-body-medium text-[color:var(--md-sys-color-on-surface-variant)]">
             <a href="#product" className="hover:text-[color:var(--md-sys-color-on-surface)]">{t("nav_product")}</a>
             <a href="#how-it-works" className="hover:text-[color:var(--md-sys-color-on-surface)]">{t("nav_how")}</a>
             <a href="#pricing" className="hover:text-[color:var(--md-sys-color-on-surface)]">{t("nav_pricing")}</a>
             <a href="#faq" className="hover:text-[color:var(--md-sys-color-on-surface)]">{t("nav_faq")}</a>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <button
               type="button"
               onClick={() => setLocale(locale === "en" ? "es" : "en")}
-              className="md-button-outlined h-9 px-4"
+              className="md-button-outlined h-9 px-3 sm:px-4"
               aria-label={locale === "en" ? "Cambiar a español" : "Switch to English"}
             >
-              🌐 {locale === "en" ? "Español" : "English"}
+              🌐 <span className="hidden sm:inline">{locale === "en" ? "Español" : "English"}</span>
             </button>
-            <a href="#waitlist" className="md-button-filled">{t("nav_join")}</a>
+            <a href="#waitlist" className="md-button-filled px-4 sm:px-6">{t("nav_join")}</a>
           </div>
         </nav>
       </header>
