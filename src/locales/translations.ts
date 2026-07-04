@@ -84,8 +84,8 @@ export const translations = {
     trust_1_body: "One-time infrastructure cost. No meter running while you sleep.",
     trust_2_title: "Private by design",
     trust_2_body: "Inference happens on dedicated hardware — no data sent to third-party clouds.",
-    trust_3_title: "Built solo, built in the open",
-    trust_3_body: "An independent project, no investors, no committee — just shipped decisions.",
+    trust_3_title: "Built solo, built in Europe",
+    trust_3_body: "An independent project based in Europe, no investors, no committee — just shipped decisions.",
 
     faq_title: "Frequently asked",
     faq_1_q: "What's the difference between an agent and the API?",
@@ -198,8 +198,8 @@ export const translations = {
     trust_1_body: "Coste de infraestructura único. Ningún medidor corriendo mientras duermes.",
     trust_2_title: "Privado por diseño",
     trust_2_body: "La inferencia ocurre en hardware dedicado — ningún dato se envía a nubes de terceros.",
-    trust_3_title: "Construido en solitario, construido en abierto",
-    trust_3_body: "Un proyecto independiente, sin inversores, sin comité — solo decisiones ejecutadas.",
+    trust_3_title: "Construido en solitario, construido en Europa",
+    trust_3_body: "Un proyecto independiente con base en Europa, sin inversores, sin comité — solo decisiones ejecutadas.",
 
     faq_title: "Preguntas frecuentes",
     faq_1_q: "¿Cuál es la diferencia entre un agente y la API?",
