@@ -25,7 +25,7 @@ export default function Home() {
             </span>
             Thirty Nighty
           </a>
-          <div className="hidden md:flex items-center gap-6 md-body-medium text-[color:var(--md-sys-color-on-surface-variant)]">
+          <div className="hidden sm:flex items-center gap-4 md:gap-6 md-body-medium text-[color:var(--md-sys-color-on-surface-variant)]">
             <a href="#product" className="hover:text-[color:var(--md-sys-color-on-surface)]">{t("nav_product")}</a>
             <a href="#how-it-works" className="hover:text-[color:var(--md-sys-color-on-surface)]">{t("nav_how")}</a>
             <a href="#pricing" className="hover:text-[color:var(--md-sys-color-on-surface)]">{t("nav_pricing")}</a>
@@ -305,6 +305,7 @@ export default function Home() {
           <p>{t("footer_copyright")}</p>
           <div className="flex items-center gap-6">
             <a href="#product" className="hover:text-[color:var(--md-sys-color-on-surface)]">{t("nav_product")}</a>
+            <a href="#how-it-works" className="hover:text-[color:var(--md-sys-color-on-surface)]">{t("nav_how")}</a>
             <a href="#pricing" className="hover:text-[color:var(--md-sys-color-on-surface)]">{t("nav_pricing")}</a>
             <a href="#faq" className="hover:text-[color:var(--md-sys-color-on-surface)]">{t("nav_faq")}</a>
           </div>
